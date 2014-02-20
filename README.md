@@ -3,7 +3,7 @@ Macs-AD
 
 Stuff for Macs that are bound to Active Directory
 
-**bind_ad.py**
+#### **bind_ad.py**
 
 The work flow is kinda specific for my office. Adjust as needed.
 
@@ -14,6 +14,6 @@ The work flow is kinda specific for my office. Adjust as needed.
 
 Highly recommend looking at what's being done here rather than running this blindly.
 
-**hostname_check.py**
+#### **hostname_check.py**
 
 Update the Mac's hostnames to match the Active Directory binding name.
