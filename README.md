@@ -5,7 +5,7 @@ Stuff for Macs that are bound to Active Directory
 
 **bind_ad.py**
 
-The work flow is kinda specific for my office. Adjust as needed.
+The work flow is kinda specific for my environment. Adjust as needed.
 
 1. If needed update the hostname
 2. Bind machine to Active Directory
