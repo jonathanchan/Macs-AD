@@ -81,6 +81,11 @@ if [ -z "$MountainLionDevTools" ] || [ -z "$MavericksDevTools" ]; then
     exit 1
 fi
 
+if [ -e '/usr/local/bin/brew' ]; then
+    echo Homebrew is already installed.
+    exit 1
+fi
+
 CURRENT_USER=$(last | grep console | grep "still logged in" | awk '{print $1}')
 
 if [ -n "$CURRENT_USER" ]; then
@@ -92,13 +97,13 @@ if [ -n "$CURRENT_USER" ]; then
     if [ $? == 0 ]; then
     	echo Post install clean up...
     	echo Running brew doctor
-        brew doctor
+        /usr/local/bin/brew doctor
 
         echo Fixing permissions
         find /usr/local -user $tempAdminAccount -exec chown -R $CURRENT_USER {} \;
 
         #echo Installing packages...
-        su $CURRENT_USER -c 'brew install tmux'
+        #su $CURRENT_USER -c 'brew install tmux'
     else
         echo something went wrong
     fi
